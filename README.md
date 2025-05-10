@@ -1,2 +1,2 @@
 # 8-bit-cpu
-My 8-bit CPU implementation in Verilog for FPGA
+An 8-bit CPU implementation in Verilog for FPGA boards. The board I am using is Cyclone V SoC.
