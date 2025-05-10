@@ -31,14 +31,14 @@ module register_file (
     // Reset and register write handling
 	 
 	 always @(posedge clk or posedge reset) begin
-			if (reset) begin
-				 pc <= 0;
-			end else begin
-				if (write_enable)
-					registers[write_addr] <= write_data;
-				if (pc_write_enable)
-					pc <= (pc < 8'h06) ? pc + 1 : pc; 
-			end
+	     if (reset) begin
+	         pc <= 0;
+	     end else begin
+	         if (write_enable)
+		     registers[write_addr] <= write_data;
+		 if (pc_write_enable)
+			 pc <= (pc < 8'h06) ? pc + 1: PC; 
+		 end
 	  end
 	  
     // Register read (asynchronous)
